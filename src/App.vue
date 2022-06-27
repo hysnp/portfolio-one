@@ -1,9 +1,17 @@
 <template>
-  <main>
-    
+  <main class="h-full dark:bg-black bg-white duration-200">
+    <SectionOneVue />
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+// vue3 parts
+import SectionOneVue from "./sections/SectionOne.vue";
+</script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+::selection {
+  color: ghostwhite;
+  background: #c77528;
+}
+</style>

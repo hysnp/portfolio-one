@@ -1,3 +1,197 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    /* @apply stuff */
+
+    .text-altinari {
+        @apply text-altinari-500;
+    }
+
+    .bg-altinari {
+        @apply bg-altinari-500;
+    }
+}
+
+@layer base {
+    /* Custom classes */
+
+    .dark {
+        color-scheme: dark;
+    }
+
+    .h-5vh {
+        height: 5vh;
+    }
+
+    .w-5vh {
+        width: 5vh;
+    }
+
+    .icon-size {
+        height: 1.5vw;
+        width: 1.5vw;
+    }
+
+    .icon-size-sm {
+        height: 3vh;
+        width: 3vh;
+    }
+
+    .mr-1vw {
+        margin-right: 1vw;
+    }
+
+    .pb-1vh {
+        padding-bottom: 1vh;
+    }
+
+    .pt-6vh {
+        padding-top: 6vh;
+    }
+
+    .px-content {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .px-content-1vw {
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .px-content-2vw {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .px-content-4vw {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .py-content {
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
+    .py-content-1vw {
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+
+    .space-x-1vw > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+        margin-right: calc(1vw * var(--tw-space-x-reverse));
+        margin-left: calc(1vw * calc(1 - var(--tw-space-x-reverse)));
+    }
+
+    .space-x-2vw > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+        margin-right: calc(2vw * var(--tw-space-x-reverse));
+        margin-left: calc(2vw * calc(1 - var(--tw-space-x-reverse)));
+    }
+
+    .space-y-1vh > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+        margin-top: calc(1vh * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1vh * var(--tw-space-y-reverse));
+    }
+
+    .text-raleway {
+        font-family: 'Raleway', sans-serif;
+        -webkit-font-feature-settings: "lnum";
+        -moz-font-feature-settings: "lnum";
+        font-feature-settings: "lnum";
+    }
+
+    .text-eva {
+        font-family: 'Yeseva One', cursive;
+    }
+
+    .text-noto {
+        font-family: 'Noto Serif', serif;
+    }
+
+    .block-shadow {
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .text-shadow {
+        text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .text-1vh {
+        font-size: 1vh;
+    }
+
+    .text-3\/2vh {
+        font-size: 1.5vh;
+    }
+
+    .text-2vh {
+        font-size: 2vh;
+    }
+
+    .text-3vh {
+        font-size: 3vh;
+    }
+
+    .text-4vh {
+        font-size: 4vh;
+    }
+
+    .text-5vh {
+        font-size: 5vh;
+    }
+
+    .text-6vh {
+        font-size: 6vh;
+    }
+
+    .text-7vh {
+        font-size: 7vh;
+    }
+
+    .text-8vh {
+        font-size: 8vh;
+    }
+
+    .text-1vw {
+        font-size: 1vw;
+    }
+
+    .text-3\/2vw {
+        font-size: 1.5vw;
+    }
+
+    .text-2vw {
+        font-size: 2vw;
+    }
+
+    .text-3vw {
+        font-size: 3vw;
+    }
+
+    .text-4vw {
+        font-size: 4vw;
+    }
+
+    .text-5vw {
+        font-size: 5vw;
+    }
+
+    .text-6vw {
+        font-size: 6vw;
+    }
+
+    .text-7vw {
+        font-size: 7vw;
+    }
+
+    .text-8vw {
+        font-size: 8vw;
+    }
+
+}
