@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute h-max right-5 top-5 z-50">
+  <div class="fixed h-max right-5 top-5 z-50">
     <div
       class="grid place-content-center h-5vh w-5vh dark:bg-neutral-800 bg-neutral-100 rounded-full"
       @click="currentThemeStore.themeList"

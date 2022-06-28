@@ -69,7 +69,7 @@
       </svg>
     </div>
     <nav
-      class="flex lg:flex-nowrap lg:flex-col flex-wrap justify-center items-center lg:w-1/4 w-full my-5 lg:space-y-5 text-center text-raleway lg:text-2vw text-3vh"
+      class="flex flex-col justify-center items-center lg:w-1/4 w-full my-10 lg:space-y-5 text-center text-raleway lg:text-2vw text-3vh"
     >
       <a
         id="nav-anim-1"
@@ -83,14 +83,14 @@
         class="px-5 hover:bg-orange-500 duration-200 rounded-full"
         style="filter: opacity(0)"
         href=""
-        >Навыки</a
+        >Портфолио</a
       >
       <a
         id="nav-anim-3"
         class="px-5 hover:bg-orange-500 duration-200 rounded-full"
         style="filter: opacity(0)"
         href=""
-        >Портфолио</a
+        >О сайте</a
       >
       <a
         id="nav-anim-4"
@@ -155,6 +155,7 @@ onMounted(() => {
   const circleOne = document.querySelector("#circle-one");
   const circleTwo = document.querySelector("#circle-two");
   const circleThree = document.querySelector("#circle-three");
+  const skillsAnim = document.querySelector("#skills-anim");
   function animMainImg() {
     if (window.innerWidth >= 1024) {
       window.addEventListener(
@@ -169,6 +170,9 @@ onMounted(() => {
           circleThree.style.transform = `translate(${
             -event.clientX / 125 + "px"
           }, ${-event.clientY / 125 + "px"})`;
+          skillsAnim.style.transform = `translate(${
+            event.clientX / 100 + "px"
+          }, ${event.clientY / 100 + "px"})`;
         })
       );
     }
