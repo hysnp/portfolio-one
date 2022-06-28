@@ -1,0 +1,33 @@
+<template>
+  <section id="section-two">
+    <h1 class="text-eva lg:text-5vw text-4vh text-center">Моё резюме.</h1>
+    <div class="flex lg:flex-row flex-col-reverse">
+      <div class="flex justify-center items-center lg:w-1/2 w-full">
+        <p class="lg:mt-0 mt-5 p-5 lg:text-3vw text-4vh text-center text-raleway">
+          HTML5 / CSS3 / SCSS / TAILWIND / JS / JQUERY / VUE / PINIA / VUE
+          ROUTER / VITE / WEBPACK / GIT / FIGMA
+        </p>
+      </div>
+      <p
+        class="lg:w-1/2 w-full p-10 text-noto lg:text-2vw text-2vh lg:bg-gradient-to-r bg-gradient-to-b dark:from-neutral-900 dark:to-black from-neutral-200 to-white lg:rounded-l-75px rounded-t-75px"
+      >
+        Здравствуйте, меня зовут Оплачко Михаил Николаевич. На данный момент я
+        ищу работу FrontEnd разработчиком. Если кратко, то созданием сайтов я
+        занимаюсь уже 2 года. В списке на этой же странице вы можете увидеть,
+        какими инструментами я умею пользоваться. FrontEnd разработка интересна
+        мне, и я с лёгкостью изучаю что-то новое для себя. Если я интересен вам,
+        можете загялнуть в моё портфолио или же прочитать полное резюме
+        <a
+          class="text-orange-500"
+          target="_blank"
+          href="https://barnaul.hh.ru/resume/e86a7784ff0a557c590039ed1f596d57716f37"
+          >тут</a
+        >.
+      </p>
+    </div>
+  </section>
+</template>
+
+<script setup></script>
+
+<style lang="scss" scoped></style>

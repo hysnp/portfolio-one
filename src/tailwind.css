@@ -194,4 +194,19 @@
         font-size: 8vw;
     }
 
+    .rounded-l-75px {
+        border-radius: 75px 0 0 75px;
+    }
+
+    .rounded-r-75px {
+        border-radius: 0 75px 75px 0;
+    }
+
+    .rounded-t-75px {
+        border-radius: 75px 75px 0 0;
+    }
+
+    .rounded-b-75px {
+        border-radius: 0 0 75px 75px;
+    }
 }
