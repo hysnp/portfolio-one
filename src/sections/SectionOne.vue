@@ -81,7 +81,7 @@
         id="nav-anim-2"
         class="px-5 py-2 hover:text-orange-500 duration-200"
         style="filter: opacity(0)"
-        href=""
+        href="#section-three"
         >Портфолио</a
       >
       <a

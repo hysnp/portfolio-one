@@ -1,6 +1,8 @@
 <template>
   <section id="section-two">
-    <h1 class="p-5 text-eva lg:text-5vw text-4vh text-center">Моё резюме.</h1>
+    <h1 class="p-5 text-eva lg:text-5vw text-4vh text-center text-orange-500">
+      Моё резюме.
+    </h1>
     <div class="flex lg:flex-row flex-col-reverse">
       <div class="relative flex justify-center items-center lg:w-1/2 w-full">
         <p

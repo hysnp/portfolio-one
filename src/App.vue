@@ -65,6 +65,7 @@ onMounted(() => {
   const circleTwo = document.querySelector("#circle-two");
   const circleThree = document.querySelector("#circle-three");
   const skillsAnim = document.querySelector("#skills-anim");
+  const portfolioYears = document.querySelector("#portfolio-years");
   function animMainImg() {
     if (window.innerWidth >= 1024) {
       window.addEventListener(
@@ -82,6 +83,9 @@ onMounted(() => {
           skillsAnim.style.transform = `translate(${
             event.clientX / 100 + "px"
           }, ${event.clientY / 100 + "px"})`;
+          portfolioYears.style.transform = `translate(${
+            -event.clientX / 150 + "px"
+          }, ${-event.clientY / 150 + "px"})`;
         })
       );
     }
