@@ -1,6 +1,6 @@
 <template>
   <section id="section-two">
-    <h1 class="text-eva lg:text-5vw text-4vh text-center">Моё резюме.</h1>
+    <h1 class="p-5 text-eva lg:text-5vw text-4vh text-center">Моё резюме.</h1>
     <div class="flex lg:flex-row flex-col-reverse">
       <div class="relative flex justify-center items-center lg:w-1/2 w-full">
         <p
@@ -12,7 +12,7 @@
         </p>
       </div>
       <p
-        class="lg:w-1/2 w-full p-10 text-noto lg:text-2vw text-2vh lg:bg-gradient-to-r bg-gradient-to-b dark:from-neutral-900 dark:to-black from-neutral-200 to-white overflow-hidden lg:rounded-l-75px rounded-t-75px"
+        class="lg:w-1/2 w-full p-10 text-noto lg:text-left text-justify lg:text-3/2vw text-2vh lg:bg-gradient-to-r bg-gradient-to-b dark:from-neutral-900 dark:to-black from-neutral-200 to-white overflow-hidden lg:rounded-l-75px rounded-t-75px"
       >
         Здравствуйте, меня зовут Оплачко Михаил Николаевич. На данный момент я
         ищу работу FrontEnd разработчиком. Если кратко, то созданием сайтов я
