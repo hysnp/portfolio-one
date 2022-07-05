@@ -1,0 +1,342 @@
+body {
+	position: relative;
+	height: max-content;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+}
+
+.main {
+	position: relative;
+	height: 1000px;
+	width: 100%;
+	z-index: 6;
+	display: flex;
+	background: #fff;
+	overflow: hidden;
+	border-radius: 0 0 50px 50px;
+	justify-content: center;
+}
+
+#logo {
+	position: relative;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	padding-top: 200px; 
+	margin: auto;
+	display: flex;
+	z-index: 10;
+	font-size: 300px; 
+	font-family: 'Comfortaa', cursive;
+	background: url(img/brn.jpg);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#lbottom {
+	position: absolute;
+	z-index: 15;
+	float: left;
+	top: 600px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: #000;
+	font-size: 25px;
+	font-family: 'Comfortaa', cursive;
+}
+
+.links {
+	z-index: 100000;
+	height: 40px;
+	width: 100%;
+	color: #000;
+	font-family: 'Comfortaa', cursive;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	position: fixed;
+	text-align: center;
+	top: -2px;
+	left: 0;
+}
+
+.links a:hover {
+	background: rgba(255, 255, 255, 0.6);
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	color: #000;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+#a-places, #a-about {
+	margin-right: 300px;
+}
+
+.a-link {
+	position: relative;
+	top: 10px;
+	padding: 10px;
+	color: #000;
+	transition: 0.5s;
+}
+
+.bgimg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+	background: url(img/brn.jpg);
+	filter: opacity(0.2);
+	border-radius: 0 0 50px 50px;
+}
+
+	/*about*/
+
+.about {
+	position: relative;
+	height: 1000px;
+	width: 100%;
+	z-index: 5;
+	display: flex;
+	background: #fff;
+	overflow: hidden;
+	margin-top: -55px;
+	font-family: 'Comfortaa', cursive;
+	border-radius: 0 0 50px 50px;
+}
+
+.about h6 {
+	position: relative;
+	font-size: 50px;
+	top: 150px;
+	left: 100px;
+	z-index: 5;
+}
+
+.about p {
+	position: absolute;
+	font-size: 30px;
+	top: 250px;
+	left: 100px;
+	width: 70%;
+	z-index: 5;
+}
+
+.bgimg2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+	background: url(img/n-brn.jpg);
+	filter: opacity(0.2);
+	border-radius: 0 0 50px 50px;
+}
+
+#button-top {
+	display: inline-block;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	margin: 30px;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	transition: background-color .3s;
+	z-index: 1000;
+	display: none;
+}
+
+#button-top:hover {
+	cursor: pointer;
+	background-color: #333;
+}
+
+#svg-button {
+	position: relative;
+	top: 7px;
+	height: 70%;
+	width: 70%;
+}
+
+#svg-button:hover {
+	fill: #fff;
+}
+
+.places {
+	font-family: 'Comfortaa', cursive;
+	position: relative;
+	height: 800px;
+	width: 100%;
+	z-index: 4;
+	display: flex;
+	background: #fff;
+	overflow: hidden;
+	margin-top: -55px;
+	border-radius: 0 0 50px 50px;
+}
+
+.places-logo {
+	position: absolute;
+	font-size: 50px;
+	top: 150px;
+	left: 100px;
+	z-index: 5;
+}
+
+#row-places {
+	position: absolute;
+	width: 100%;
+	height: 500px;
+	top: 250px;
+	z-index: 20;
+}
+
+.col-4 img {
+	filter: contrast(0.5);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+.col-4 img:hover {
+	filter: none;
+	box-shadow: none;
+	-webkit-transform: scale(0.95);
+	transform: scale(0.95);
+}
+
+.house {
+	background-repeat: no-repeat;
+	z-index: 100;
+	width: 100%;
+	height: auto;
+	border-radius: 25px;
+}
+
+.river-station {
+	background-repeat: no-repeat;
+	z-index: 100;
+	width: 100%;
+	height: auto;
+	border-radius: 25px;
+}
+
+.monument {
+	background-repeat: no-repeat;
+	z-index: 100;
+	width: 100%;
+	height: auto;
+	border-radius: 25px;
+}
+
+.row h6 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #000;
+	top: 20px;
+	font-size: 50px;
+}
+
+.bgimg3 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: -2;
+	background: url(img/word.jpg);
+	filter: opacity(0.2);
+	border-radius: 0 0 50px 50px;
+}
+
+.other {
+	margin-top: -55px;
+	height: 700px;
+	width: 100%;
+	position: relative;
+	font-family: 'Comfortaa', cursive;
+}
+
+#other-logo {
+	color: #242424;
+	position: absolute;
+	font-size: 50px;
+	width: max-content;
+	height: max-content;
+	top: 150px;
+	left: 100px;
+	z-index: 5;
+}
+
+.bottom-inf {
+	position: absolute;
+	left: 100px;
+	bottom: 100px;
+}
+
+.bottom-inf p {
+	color: #242424;
+	font-size: 35px;
+	position: relative;
+	width: max-content;
+	height: max-content;
+	display: flex;
+}
+
+.gif {
+	width: 100% !important;
+	height: 700px !important;
+	position: relative;
+	top: 0;
+	right: 0;
+	z-index: -100;
+	filter: opacity(0.5);
+}
+
+#gif {
+	margin: 0;
+	padding: 0;
+	object-fit: cover;
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+	/* scroll */
+
+
+::-webkit-scrollbar {
+	width:12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #b0b0b0;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #8c8c8c;
+}
+
+::-webkit-scrollbar-track{
+    border-left: solid 1px #ccc;
+    background-color: #eee;
+}

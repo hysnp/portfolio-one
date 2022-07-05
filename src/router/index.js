@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import siteOne from "../sites/SiteOneVue.vue";
-const siteTwo = () => import("../sites/SiteTwoVue.vue");
+import siteOne from "../router-sites/SiteOneVue.vue";
+const siteTwo = () => import("../router-sites/SiteTwoVue.vue");
 // const RegisterPage = () => import("../app-parts/RegisterPart.vue");
 
 const router = createRouter({
