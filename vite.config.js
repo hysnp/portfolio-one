@@ -6,10 +6,13 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: "/portfolio-one/",
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
+  },
+  base: "/portfolio-one/",
+  build: {
+    outDir: "docs",
   },
 });
