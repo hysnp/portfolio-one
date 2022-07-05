@@ -30,7 +30,7 @@
       />
       <a
         target="_blank"
-        href="#"
+        href="https://github.com/str1ve21/portfolio-one"
         class="m-2 dark:bg-neutral-800 bg-neutral-200 hover:dark:bg-orange-500 hover:bg-orange-500 duration-200 rounded-full object-cover"
       >
         <p
@@ -41,7 +41,7 @@
       </a>
       <a
         target="_blank"
-        href="../src/portfolio/barnaul/index.html"
+        href="../portfolio/barnaul/index.html"
         class="m-2 dark:bg-neutral-800 bg-neutral-200 hover:dark:bg-orange-500 hover:bg-orange-500 duration-200 rounded-full object-cover"
       >
         <p
