@@ -5,8 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "deploy": "npm run build && push-dir --dir=dist --branch=serve"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .eslintignore",
+    "deploy": "npm run lint && npm run build && push-dir --dir=dist --branch=serve"
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.6",

@@ -33,7 +33,9 @@
         href="#"
         class="m-2 dark:bg-neutral-800 bg-neutral-200 hover:dark:bg-orange-500 hover:bg-orange-500 duration-200 rounded-full object-cover"
       >
-        <p class="w-full my-3 text-raleway lg:text-3/2vw text-2vh text-center uppercase">
+        <p
+          class="w-full my-3 text-raleway lg:text-3/2vw text-2vh text-center uppercase"
+        >
           Исходный код
         </p>
       </a>
@@ -42,7 +44,9 @@
         href="../src/portfolio/barnaul/index.html"
         class="m-2 dark:bg-neutral-800 bg-neutral-200 hover:dark:bg-orange-500 hover:bg-orange-500 duration-200 rounded-full object-cover"
       >
-        <p class="w-full my-3 text-raleway lg:text-3/2vw text-2vh text-center uppercase">
+        <p
+          class="w-full my-3 text-raleway lg:text-3/2vw text-2vh text-center uppercase"
+        >
           Предпросмотр
         </p>
       </a>
