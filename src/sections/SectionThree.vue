@@ -11,7 +11,7 @@
         2019 - 2022
       </h2>
       <div class="router w-full">
-        <nav class="flex flex-wrap justify-around p-2">
+        <!-- <nav class="flex flex-wrap justify-around p-2">
           <router-link
             v-for="item in sitesLinks"
             :key="item.id"
@@ -20,11 +20,14 @@
           >
             {{ item.name }}
           </router-link>
-        </nav>
+        </nav> -->
         <div
           class="router-base lg:p-10 p-5 bg-gradient-to-t dark:from-neutral-900 dark:to-black from-neutral-200 to-white rounded-b-75px z-20"
         >
-          <router-view></router-view>
+          <nav class="grid grid-cols-3">
+            <a href="#" class="w-full"></a>
+          </nav>
+          <!-- <router-view></router-view> -->
         </div>
       </div>
     </div>
@@ -32,48 +35,48 @@
 </template>
 
 <script setup>
-const sitesLinks = [
-  {
-    id: 1,
-    name: "Первый сайт",
-    to: "siteOne",
-  },
-  {
-    id: 2,
-    name: "Достопримечательности Барнаула",
-    to: "siteTwo",
-  },
-  {
-    id: 3,
-    name: "Самолёты ВОВ",
-    to: "siteTwo",
-  },
-  {
-    id: 4,
-    name: "Кофейня",
-    to: "siteTwo",
-  },
-  {
-    id: 5,
-    name: "Сайт города",
-    to: "siteTwo",
-  },
-  {
-    id: 6,
-    name: "ToDo",
-    to: "siteTwo",
-  },
-  {
-    id: 7,
-    name: "Нынешний проект",
-    to: "siteTwo",
-  },
-  {
-    id: 8,
-    name: "Информация",
-    to: "siteTwo",
-  },
-];
+// const sitesLinks = [
+//   {
+//     id: 1,
+//     name: "Первый сайт",
+//     to: "siteOne",
+//   },
+//   {
+//     id: 2,
+//     name: "Достопримечательности Барнаула",
+//     to: "siteTwo",
+//   },
+//   {
+//     id: 3,
+//     name: "Самолёты ВОВ",
+//     to: "siteTwo",
+//   },
+//   {
+//     id: 4,
+//     name: "Кофейня",
+//     to: "siteTwo",
+//   },
+//   {
+//     id: 5,
+//     name: "Сайт города",
+//     to: "siteTwo",
+//   },
+//   {
+//     id: 6,
+//     name: "ToDo",
+//     to: "siteTwo",
+//   },
+//   {
+//     id: 7,
+//     name: "Нынешний проект",
+//     to: "siteTwo",
+//   },
+//   {
+//     id: 8,
+//     name: "Информация",
+//     to: "siteTwo",
+//   },
+// ];
 </script>
 
 <style lang="scss" scoped></style>
