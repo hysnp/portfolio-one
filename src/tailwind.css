@@ -25,6 +25,10 @@
         height: 5vh;
     }
 
+    .h-75vh {
+        height: 75vh;
+    }
+
     .w-5vh {
         width: 5vh;
     }
@@ -156,6 +160,10 @@
 
     .text-1vw {
         font-size: 1vw;
+    }
+
+    .text-5\/4vw {
+        font-size: 1.25vw;
     }
 
     .text-3\/2vw {

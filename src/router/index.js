@@ -7,12 +7,12 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/site-one/",
+      path: "/",
       name: "siteOne",
       component: siteOne,
     },
     {
-      path: "/site-two/",
+      path: "/site-2/",
       name: "siteTwo",
       component: siteTwo,
     },

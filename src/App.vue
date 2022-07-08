@@ -102,4 +102,26 @@ onMounted(() => {
   color: ghostwhite;
   background: #c77528;
 }
+
+#resume-anim, #portfolio-anim {
+  animation: 60s linear text-left-glide infinite;
+}
+
+@media (min-width: 1024px) {
+  #resume-anim, #portfolio-anim {
+    animation: 240s linear text-left-glide infinite;
+  }
+}
+
+@keyframes text-left-glide {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -50%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
 </style>

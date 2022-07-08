@@ -1,33 +1,72 @@
 <template>
-  <section id="section-three">
-    <h1 class="p-5 text-eva lg:text-5vw text-4vh text-center text-orange-500">
-      Портфолио.
-    </h1>
-    <div class="flex lg:flex-row flex-col h-full">
+  <section id="section-three" class="overflow-hidden">
+    <p
+      id="portfolio-anim"
+      class="w-max lg:my-5 my-0 mb-5 lg:text-2vw text-3vh text-raleway dark:text-neutral-900 text-neutral-200 uppercase"
+    >
+      / portfolio / portfolio / portfolio / portfolio / portfolio / portfolio /
+      portfolio / portfolio / portfolio / portfolio / portfolio / portfolio /
+      portfolio / portfolio / portfolio / portfolio
+    </p>
+    <div class="flex lg:flex-row flex-col-reverse h-full">
       <h2
         id="portfolio-years"
-        class="h-full text-eva text-center lg:text-8vw text-5vh dark:text-neutral-800 text-neutral-300 lg:vertical-rl z-10"
+        class="h-max text-eva text-center lg:text-8vw text-5vh dark:text-neutral-800 text-neutral-300 lg:vertical-rl z-10"
       >
         2019 - 2022
       </h2>
-      <div class="router w-full">
-        <!-- <nav class="flex flex-wrap justify-around p-2">
-          <router-link
-            v-for="item in sitesLinks"
-            :key="item.id"
-            :to="{ name: item.to }"
-            class="m-2 px-5 py-2 text-raleway text-center lg:text-3/2vw text-2vh hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-200 duration-200 rounded-full z-20"
-          >
-            {{ item.name }}
-          </router-link>
-        </nav> -->
+      <div class="portfolio w-full">
         <div
-          class="router-base lg:p-10 p-5 bg-gradient-to-t dark:from-neutral-900 dark:to-black from-neutral-200 to-white rounded-b-75px z-20"
+          class="lg:p-10 p-5 bg-gradient-to-t dark:from-neutral-900 dark:to-black from-neutral-200 to-white rounded-b-75px z-20"
         >
-          <nav class="grid grid-cols-3">
-            <a href="#" class="w-full"></a>
-          </nav>
-          <!-- <router-view></router-view> -->
+          <h2 class="text-eva text-orange-500 lg:text-3vw text-4vh">
+            Портфолио.
+          </h2>
+          <p
+            class="mb-5 text-raleway dark:text-neutral-400 text-neutral-600 lg:text-1vw text-1vh"
+          >
+            Самые интересные сайты из истории моего обучения.
+          </p>
+          <div class="flex h-75vh w-full overflow-hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-12 mx-5 cursor-pointer"
+              id="chevron-left"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            <div
+              id="portfolio-slider"
+              class="flex h-full w-full space-x-5 rounded-75px overflow-hidden"
+            >
+              <div id="site-1" class="min-w-full bg-white rounded-75px"></div>
+              <div id="site-2" class="min-w-full bg-black rounded-75px"></div>
+              <div id="site-3" class="min-w-full bg-black rounded-75px"></div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-12 mx-5 cursor-pointer"
+              id="chevron-right"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -35,48 +74,45 @@
 </template>
 
 <script setup>
-// const sitesLinks = [
-//   {
-//     id: 1,
-//     name: "Первый сайт",
-//     to: "siteOne",
-//   },
-//   {
-//     id: 2,
-//     name: "Достопримечательности Барнаула",
-//     to: "siteTwo",
-//   },
-//   {
-//     id: 3,
-//     name: "Самолёты ВОВ",
-//     to: "siteTwo",
-//   },
-//   {
-//     id: 4,
-//     name: "Кофейня",
-//     to: "siteTwo",
-//   },
-//   {
-//     id: 5,
-//     name: "Сайт города",
-//     to: "siteTwo",
-//   },
-//   {
-//     id: 6,
-//     name: "ToDo",
-//     to: "siteTwo",
-//   },
-//   {
-//     id: 7,
-//     name: "Нынешний проект",
-//     to: "siteTwo",
-//   },
-//   {
-//     id: 8,
-//     name: "Информация",
-//     to: "siteTwo",
-//   },
-// ];
+import { onMounted } from "vue";
+
+onMounted(() => {
+  const chevronLeft = document.querySelector("#chevron-left");
+  const chevronRight = document.querySelector("#chevron-right");
+  const portfolioSlider = document.querySelector("#portfolio-slider");
+
+  let currentSlide = 0;
+
+  chevronLeft.addEventListener("click", () => {
+    --currentSlide;
+    portfolioSlider.scrollTo({
+      top: 0,
+      left: portfolioSlider.clientWidth * currentSlide + 20,
+      behavior: "smooth",
+    });
+  });
+  chevronRight.addEventListener("click", () => {
+    ++currentSlide;
+    portfolioSlider.scrollTo({
+      top: 0,
+      left: portfolioSlider.clientWidth * currentSlide + 20,
+      behavior: "smooth",
+    });
+  });
+
+  // const portfolioBgColors = [
+  //   "#B8513A",
+  //   "#CB9442",
+  //   "#A6B83A",
+  //   "#79B83A",
+  //   "#40BA69",
+  //   "#40B3BA",
+  //   "#405ABA",
+  //   "#8440BA",
+  //   "#BA4082",
+  // ];
+  // document.querySelector("#rand-bg").style.backgroundColor = portfolioBgColors[Math.floor(Math.random() * portfolioBgColors.length)];
+});
 </script>
 
 <style lang="scss" scoped></style>
