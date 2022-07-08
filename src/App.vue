@@ -4,6 +4,7 @@
     <SectionOneVue />
     <SectionTwoVue />
     <SectionThreeVue />
+    <SectionFourVue />
   </main>
 </template>
 
@@ -12,6 +13,7 @@
 import SectionOneVue from "./sections/SectionOne.vue";
 import SectionTwoVue from "./sections/SectionTwo.vue";
 import SectionThreeVue from "./sections/SectionThree.vue";
+import SectionFourVue from "./sections/SectionFour.vue";
 
 import { onMounted } from "vue";
 // import { animate } from "motion";

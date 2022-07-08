@@ -27,8 +27,17 @@
           >
             Самые интересные сайты из истории моего обучения.
           </p>
-          <div class="flex h-75vh w-full overflow-hidden">
-            <svg
+          <div class="flex flex-col h-90vh w-full overflow-hidden">
+            <div
+              id="portfolio-slider"
+              class="flex h-full w-full rounded-75px overflow-hidden"
+            >
+              <div id="site-1" class="min-w-full bg-white"></div>
+              <div id="site-2" class="min-w-full bg-black"></div>
+              <div id="site-3" class="min-w-full bg-white"></div>
+            </div>
+            <div id="slider-buttons" class="flex justify-around lg:mt-10 mt-5">
+              <svg
               xmlns="http://www.w3.org/2000/svg"
               class="w-12 mx-5 cursor-pointer"
               id="chevron-left"
@@ -43,14 +52,6 @@
                 d="M15 19l-7-7 7-7"
               />
             </svg>
-            <div
-              id="portfolio-slider"
-              class="flex h-full w-full space-x-5 rounded-75px overflow-hidden"
-            >
-              <div id="site-1" class="min-w-full bg-white rounded-75px"></div>
-              <div id="site-2" class="min-w-full bg-black rounded-75px"></div>
-              <div id="site-3" class="min-w-full bg-black rounded-75px"></div>
-            </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="w-12 mx-5 cursor-pointer"
@@ -66,6 +67,7 @@
                 d="M9 5l7 7-7 7"
               />
             </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -80,24 +82,29 @@ onMounted(() => {
   const chevronLeft = document.querySelector("#chevron-left");
   const chevronRight = document.querySelector("#chevron-right");
   const portfolioSlider = document.querySelector("#portfolio-slider");
+  const sliderChildCount = portfolioSlider.childElementCount;
 
   let currentSlide = 0;
 
   chevronLeft.addEventListener("click", () => {
-    --currentSlide;
-    portfolioSlider.scrollTo({
-      top: 0,
-      left: portfolioSlider.clientWidth * currentSlide + 20,
-      behavior: "smooth",
-    });
+    if (currentSlide > 0) {
+      --currentSlide;
+      portfolioSlider.scrollTo({
+        top: 0,
+        left: portfolioSlider.clientWidth * currentSlide,
+        behavior: "smooth",
+      });
+    }
   });
   chevronRight.addEventListener("click", () => {
-    ++currentSlide;
-    portfolioSlider.scrollTo({
-      top: 0,
-      left: portfolioSlider.clientWidth * currentSlide + 20,
-      behavior: "smooth",
-    });
+    if (currentSlide + 1 < sliderChildCount) {
+      ++currentSlide;
+      portfolioSlider.scrollTo({
+        top: 0,
+        left: portfolioSlider.clientWidth * currentSlide,
+        behavior: "smooth",
+      });
+    }
   });
 
   // const portfolioBgColors = [
