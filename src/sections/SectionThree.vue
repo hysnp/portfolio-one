@@ -32,41 +32,44 @@
               id="portfolio-slider"
               class="flex h-full w-full rounded-75px overflow-hidden"
             >
-              <div id="site-1" class="min-w-full bg-white"></div>
-              <div id="site-2" class="min-w-full bg-black"></div>
-              <div id="site-3" class="min-w-full bg-white"></div>
+              <div
+                v-for="site in portfolio"
+                :key="site.id"
+                :id="`site-${site.id}`"
+                :class="`min-w-full dark:bg-${site.color}-700 bg-${site.color}-300`"
+              ></div>
             </div>
             <div id="slider-buttons" class="flex justify-around lg:mt-10 mt-5">
               <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-12 mx-5 cursor-pointer"
-              id="chevron-left"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-12 mx-5 cursor-pointer"
-              id="chevron-right"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-12 mx-5 cursor-pointer"
+                id="chevron-left"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-12 mx-5 cursor-pointer"
+                id="chevron-right"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </div>
           </div>
         </div>
@@ -78,6 +81,27 @@
 <script setup>
 import { onMounted } from "vue";
 
+const portfolio = [
+  {
+    id: 1,
+    color: "emerald",
+    h1: "hello 1",
+    p: "lorem ipsum 1",
+  },
+  {
+    id: 2,
+    color: "slate",
+    h1: "hello 2",
+    p: "lorem ipsum 2",
+  },
+  {
+    id: 3,
+    color: "yellow",
+    h1: "hello 3",
+    p: "lorem ipsum 3",
+  },
+];
+
 onMounted(() => {
   const chevronLeft = document.querySelector("#chevron-left");
   const chevronRight = document.querySelector("#chevron-right");
@@ -87,24 +111,26 @@ onMounted(() => {
   let currentSlide = 0;
 
   chevronLeft.addEventListener("click", () => {
-    if (currentSlide > 0) {
-      --currentSlide;
-      portfolioSlider.scrollTo({
-        top: 0,
-        left: portfolioSlider.clientWidth * currentSlide,
-        behavior: "smooth",
-      });
+    --currentSlide;
+    if (currentSlide < 0) {
+      currentSlide = sliderChildCount - 1;
     }
+    portfolioSlider.scrollTo({
+      top: 0,
+      left: portfolioSlider.clientWidth * currentSlide,
+      behavior: "smooth",
+    });
   });
   chevronRight.addEventListener("click", () => {
-    if (currentSlide + 1 < sliderChildCount) {
-      ++currentSlide;
-      portfolioSlider.scrollTo({
-        top: 0,
-        left: portfolioSlider.clientWidth * currentSlide,
-        behavior: "smooth",
-      });
+    ++currentSlide;
+    if (currentSlide + 1 > sliderChildCount) {
+      currentSlide = 0;
     }
+    portfolioSlider.scrollTo({
+      top: 0,
+      left: portfolioSlider.clientWidth * currentSlide,
+      behavior: "smooth",
+    });
   });
 
   // const portfolioBgColors = [

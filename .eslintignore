@@ -1,5 +1,5 @@
-# Portfolio sites
-src/portfolio/**
+# Custom ignore
+docs/**
 
 # Logs
 logs

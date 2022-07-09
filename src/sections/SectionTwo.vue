@@ -4,8 +4,9 @@
       id="resume-anim"
       class="w-max lg:my-5 my-0 mb-5 lg:text-2vw text-3vh text-raleway dark:text-neutral-900 text-neutral-200 uppercase"
     >
-      / summary / summary / summary / summary / summary / summary / summary / summary /
-      summary / summary / summary / summary / summary / summary / summary / summary
+      / summary / summary / summary / summary / summary / summary / summary /
+      summary / summary / summary / summary / summary / summary / summary /
+      summary / summary
     </p>
     <div class="flex lg:flex-row flex-col-reverse">
       <div class="relative flex justify-center items-center lg:w-1/2 w-full">

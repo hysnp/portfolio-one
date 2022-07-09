@@ -86,8 +86,8 @@ onMounted(() => {
             event.clientX / 100 + "px"
           }, ${event.clientY / 100 + "px"})`;
           portfolioYears.style.transform = `translate(${
-            -event.clientX / 150 + "px"
-          }, ${-event.clientY / 150 + "px"})`;
+            -event.clientX / 200 + "px"
+          }, ${-event.clientY / 200 + "px"})`;
         })
       );
     }
@@ -105,12 +105,16 @@ onMounted(() => {
   background: #c77528;
 }
 
-#resume-anim, #portfolio-anim {
+#resume-anim,
+#portfolio-anim,
+#about-site-anim {
   animation: 60s linear text-left-glide infinite;
 }
 
 @media (min-width: 1024px) {
-  #resume-anim, #portfolio-anim {
+  #resume-anim,
+  #portfolio-anim,
+  #about-site-anim {
     animation: 240s linear text-left-glide infinite;
   }
 }
