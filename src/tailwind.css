@@ -4,17 +4,10 @@
 
 @layer components {
     /* @apply stuff */
-
-    .text-altinari {
-        @apply text-altinari-500;
-    }
-
-    .bg-altinari {
-        @apply bg-altinari-500;
-    }
 }
 
 @layer base {
+    
     /* Custom classes */
 
     .dark {
@@ -128,6 +121,10 @@
 
     .text-3\/2vh {
         font-size: 1.5vh;
+    }
+
+    .text-5\/4vh {
+        font-size: 1.25vh;
     }
 
     .text-2vh {

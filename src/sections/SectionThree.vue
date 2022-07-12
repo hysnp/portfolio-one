@@ -15,62 +15,101 @@
       >
         2019 - 2022
       </h2>
-      <div class="portfolio w-full">
-        <div
-          class="lg:p-10 p-5 bg-gradient-to-t dark:from-neutral-900 dark:to-black from-neutral-200 to-white rounded-b-75px z-20"
+      <div
+        class="portfolio bg-gradient-to-t dark:from-neutral-900 dark:to-black from-neutral-200 to-white rounded-b-75px z-20"
+      >
+        <h2 class="lg:ml-10 ml-5 text-eva text-orange-500 lg:text-3vw text-4vh">
+          Портфолио.
+        </h2>
+        <p
+          class="lg:ml-10 ml-5 mb-5 text-raleway dark:text-neutral-400 text-neutral-600 lg:text-1vw text-1vh"
         >
-          <h2 class="text-eva text-orange-500 lg:text-3vw text-4vh">
-            Портфолио.
-          </h2>
-          <p
-            class="mb-5 text-raleway dark:text-neutral-400 text-neutral-600 lg:text-1vw text-1vh"
+          Самые интересные сайты из истории моего обучения.
+        </p>
+        <div class="flex flex-col h-90vh overflow-hidden">
+          <div
+            id="portfolio-slider"
+            class="snap-mandatory snap-x flex h-full space-x-1 lg:mx-10 mx-5 rounded-75px overflow-hidden"
           >
-            Самые интересные сайты из истории моего обучения.
-          </p>
-          <div class="flex flex-col h-90vh w-full overflow-hidden">
             <div
-              id="portfolio-slider"
-              class="flex h-full w-full rounded-75px overflow-hidden"
+              v-for="site in portfolio"
+              :key="site.id"
+              :id="`site-${site.id}`"
+              class="snap-center relative flex items-center min-w-full dark:bg-black bg-white"
             >
-              <div
-                v-for="site in portfolio"
-                :key="site.id"
-                :id="`site-${site.id}`"
-                :class="`min-w-full dark:bg-${site.color}-700 bg-${site.color}-300`"
-              ></div>
+              <div class="lg:w-3/5 w-full lg:mx-10 mx-5 z-20">
+                <h1 class="text-eva text-orange-500 lg:text-3vw text-4vh">
+                  {{ site.h1 }}
+                </h1>
+                <p
+                  class="mb-5 text-raleway dark:text-neutral-400 text-neutral-600 lg:text-1vw text-1vh"
+                >
+                  {{ site.id }} / {{ site.year }}
+                </p>
+                <p
+                  class="text-noto lg:text-left text-justify lg:text-1vw text-5/4vh"
+                >
+                  {{ site.p }}
+                </p>
+                <div v-if="site.showLinks" class="flex flex-wrap mt-5">
+                  <a
+                    target="_blank"
+                    :href="`${site.gitLink}`"
+                    class="my-2 mr-4"
+                  >
+                    <p
+                      class="w-max lg:px-10 px-5 py-2 text-raleway lg:text-3/2vw text-2vh hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-300 duration-200 rounded-full"
+                    >
+                      GitHub
+                    </p>
+                  </a>
+                  <a target="_blank" :href="`${site.prevLink}`" class="my-2">
+                    <p
+                      class="w-max lg:px-10 px-5 py-2 text-raleway lg:text-3/2vw text-2vh hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-300 duration-200 rounded-full"
+                    >
+                      Предпрсмотр
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <img
+                class="absolute right-0 h-full dark:brightness-50 brightness-100 object-cover object-top z-10"
+                :src="`./src/assets/page-${site.id}.webp`"
+                :alt="`Скриншот моего ${site.id} сайта.`"
+              />
             </div>
-            <div id="slider-buttons" class="flex justify-around lg:mt-10 mt-5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-12 mx-5 cursor-pointer"
-                id="chevron-left"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-12 mx-5 cursor-pointer"
-                id="chevron-right"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </div>
+          </div>
+          <div id="slider-buttons" class="flex justify-around lg:my-10 my-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-12 mx-5 cursor-pointer"
+              id="chevron-left"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-12 mx-5 cursor-pointer"
+              id="chevron-right"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </div>
         </div>
       </div>
@@ -84,21 +123,59 @@ import { onMounted } from "vue";
 const portfolio = [
   {
     id: 1,
-    color: "emerald",
-    h1: "hello 1",
-    p: "lorem ipsum 1",
+    h1: "Мой первый сайт.",
+    p: `Все мы с чего-то начинали. Я, естественно, не исключение. В основном,
+        свой путь в FrontEnd-е я начинал с сайта HTMLBook и MDN. Изредка смотрел
+        различные видео, для более подробного понимания темы, разве что избегал
+        "самые аху### способы". Каждую тему я закреплял на практике, путём
+        создания различных элементов сайта, но тогда я не особо переживал по
+        поводу исторической ценности своих первых шагов, поэтому почти всё я
+        делал на одном сайте. До наших дней сохранилась только финальная версия
+        сайта и найденный археологами "Безымянный.png" файл (фон). Думаю, код вам не
+        особо интересен, поэтому тут его нет.`,
+    year: 2019,
+    showLinks: false,
   },
   {
     id: 2,
-    color: "slate",
-    h1: "hello 2",
-    p: "lorem ipsum 2",
+    h1: "Интересные места Барнаула.",
+    p: `Это мой первый многостраничный сайт. Его я создавал для школы,
+        так как на новогодние каникулы нам задали сделать сайты. Код там конечно плохой,
+        и адаптивность хромает, но в общем и целом, он имеет место быть,
+        учитывая мой опыт на тот момент. По итогу, учителям не понравилось то,
+        что шрифт для заголовка и текста одинаковый. В принципе, замечание
+        справедливое, хоть тогда я и не особо был доволен, особенно учитывая то,
+        что этот сайт выглядел в разы лучше всех других.`,
+    year: 2019,
+    showLinks: true,
+    gitLink: "https://github.com/str1ve21/places-of-barnaul",
+    prevLink: "https://str1ve21.github.io/places-of-barnaul/",
   },
   {
     id: 3,
-    color: "yellow",
-    h1: "hello 3",
-    p: "lorem ipsum 3",
+    h1: "Самолёты ВОВ.",
+    p: `Данная работа выглядит уже в разы лучше предыдущих. Тут я использовал библиотеку
+        TiltJS вместе с jQuery, да и код уже не такой страшный. Как итог, данную
+        работу так и не смогли оценить, причина тому - заочное обучение, а защита работ
+        у нас должна была быть очно. Конечно данный факт меня не сильно расстроил,
+        ведь благодаря этой работе я смог набраться большим количеством опыта.`,
+    year: 2020,
+    showLinks: true,
+    gitLink: "https://github.com/str1ve21/ww2-planes",
+    prevLink: "https://str1ve21.github.io/ww2-planes/",
+  },
+  {
+    id: 4,
+    h1: "Кофейня.",
+    p: `Данная работа выглядит уже в разы лучше предыдущих. Тут я использовал библиотеку
+        TiltJS вместе с jQuery, да и код уже не такой страшный. Как итог, данную
+        работу так и не смогли оценить, причина тому - заочное обучение, а защита работ
+        у нас должна была быть очно. Конечно данный факт меня не сильно расстроил,
+        ведь благодаря этой работе я смог набраться большим количеством опыта.`,
+    year: 2020,
+    showLinks: true,
+    gitLink: "https://github.com/str1ve21/ww2-planes",
+    prevLink: "https://str1ve21.github.io/ww2-planes/",
   },
 ];
 
@@ -132,19 +209,6 @@ onMounted(() => {
       behavior: "smooth",
     });
   });
-
-  // const portfolioBgColors = [
-  //   "#B8513A",
-  //   "#CB9442",
-  //   "#A6B83A",
-  //   "#79B83A",
-  //   "#40BA69",
-  //   "#40B3BA",
-  //   "#405ABA",
-  //   "#8440BA",
-  //   "#BA4082",
-  // ];
-  // document.querySelector("#rand-bg").style.backgroundColor = portfolioBgColors[Math.floor(Math.random() * portfolioBgColors.length)];
 });
 </script>
 

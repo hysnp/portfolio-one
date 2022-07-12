@@ -12,7 +12,7 @@
       <div class="relative flex justify-center items-center lg:w-1/2 w-full">
         <p
           id="skills-anim"
-          class="lg:mt-0 mt-5 m-10 lg:text-2vw text-3vh text-center text-raleway z-10"
+          class="m-10 lg:text-2vw text-3vh text-center text-raleway z-10"
         >
           HTML5 / CSS3 / SCSS / TAILWIND / JS / JQUERY / VUE / PINIA / VUE
           ROUTER / VITE / WEBPACK / GIT / FIGMA
