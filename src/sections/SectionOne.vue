@@ -88,14 +88,14 @@
         id="nav-anim-3"
         class="px-5 py-2 hover:text-orange-500 duration-200"
         style="filter: opacity(0)"
-        href=""
+        href="#section-four"
         >О сайте</a
       >
       <a
         id="nav-anim-4"
         class="px-5 py-2 hover:text-orange-500 duration-200"
         style="filter: opacity(0)"
-        href=""
+        href="#section-five"
         >Ссылки</a
       >
     </nav>
