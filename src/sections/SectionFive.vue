@@ -11,9 +11,21 @@
     <div
       class="flex lg:flex-row flex-col justify-center items-center w-full p-10 bg-gradient-to-b dark:from-neutral-900 dark:to-black from-neutral-200 to-white overflow-hidden rounded-t-75px"
     >
-      <div id="contacts" class="flex flex-row flex-wrap justify-around items-center lg:w-1/2 w-full lg:mb-0 lg:mr-10 mb-10 lg:px-10">
-        <a v-for="link in links" :key="link.id" :href="link.href" target="_blank" class="m-2 min-w-10 w-5vw">
-          <img :src="`./src/assets/${link.name}.svg`" :alt="`Логотип ${link.name}`">
+      <div
+        id="contacts"
+        class="flex flex-row flex-wrap justify-around items-center lg:w-1/2 w-full lg:mb-0 lg:mr-10 mb-10 lg:px-10"
+      >
+        <a
+          v-for="link in links"
+          :key="link.id"
+          :href="link.href"
+          target="_blank"
+          class="m-2 min-w-10 w-5vw"
+        >
+          <img
+            :src="`./src/assets/${link.name}.svg`"
+            :alt="`Логотип ${link.name}`"
+          />
         </a>
       </div>
       <div

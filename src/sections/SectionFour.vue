@@ -18,9 +18,7 @@
         >
           Инфомация о нём и история разработки.
         </p>
-        <p
-          class="mb-7 text-noto lg:text-left text-justify lg:text-lg text-md"
-        >
+        <p class="mb-7 text-noto lg:text-left text-justify lg:text-lg text-md">
           Разработка данного сайта заняла у меня около 20 дней со свободным
           графиком. За время создания этого проекта я столкнулся с различными
           трудностями, но все они уже позади. Одна из проблем - отсутствие
@@ -40,7 +38,11 @@
           я как всегда набрался некоторого опыта, чему очень рад. Надеюсь, вам
           сайт понравился тоже.
         </p>
-        <a class="flex w-max" target="_blank" href="https://github.com/str1ve21/portfolio-one">
+        <a
+          class="flex w-max"
+          target="_blank"
+          href="https://github.com/str1ve21/portfolio-one"
+        >
           <p
             class="w-max lg:px-10 px-5 py-2 text-raleway lg:text-3xl text-xl hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-300 duration-200 rounded-full"
           >
@@ -48,7 +50,9 @@
           </p>
         </a>
       </div>
-      <div class="relative flex justify-center items-center w-1/3 mx-auto mb-10">
+      <div
+        class="relative flex justify-center items-center w-1/3 mx-auto mb-10"
+      >
         <div class="holo-gradient w-1/2 rounded-full">
           <img
             id="about-site-logo"
