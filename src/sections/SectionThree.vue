@@ -2,7 +2,7 @@
   <section id="section-three" class="overflow-hidden">
     <p
       id="portfolio-anim"
-      class="w-max lg:my-5 my-0 mb-5 lg:text-2vw text-3vh text-raleway dark:text-neutral-900 text-neutral-200 uppercase"
+      class="w-max lg:my-5 my-0 mb-5 text-4xl text-raleway dark:text-neutral-900 text-neutral-200 uppercase"
     >
       / portfolio / portfolio / portfolio / portfolio / portfolio / portfolio /
       portfolio / portfolio / portfolio / portfolio / portfolio / portfolio /
@@ -11,22 +11,22 @@
     <div class="flex lg:flex-row flex-col-reverse h-full">
       <h2
         id="portfolio-years"
-        class="h-max text-eva text-center lg:text-8vw text-5vh dark:text-neutral-800 text-neutral-300 lg:vertical-rl z-10"
+        class="h-max lg:mt-0 mt-5 text-eva text-center lg:text-10xl text-5xl dark:text-neutral-800 text-neutral-300 lg:vertical-rl z-10"
       >
         2019 - 2022
       </h2>
       <div
         class="portfolio bg-gradient-to-t dark:from-neutral-900 dark:to-black from-neutral-200 to-white rounded-b-75px z-20"
       >
-        <h2 class="lg:ml-10 ml-5 text-eva text-orange-500 lg:text-3vw text-4vh">
+        <h2 class="lg:ml-10 ml-5 text-eva text-orange-500 lg:text-6xl text-4xl">
           Портфолио.
         </h2>
         <p
-          class="lg:ml-10 ml-5 mb-5 text-raleway dark:text-neutral-400 text-neutral-600 lg:text-1vw text-1vh"
+          class="lg:ml-10 ml-5 mb-5 text-raleway dark:text-neutral-400 text-neutral-600 text-md"
         >
           Самые интересные сайты из истории моего обучения.
         </p>
-        <div class="flex flex-col h-90vh overflow-hidden">
+        <div class="flex flex-col min-h-xl h-90vh overflow-hidden">
           <div
             id="portfolio-slider"
             class="snap-mandatory snap-x flex h-full space-x-1 lg:mx-10 mx-5 rounded-75px overflow-hidden"
@@ -38,16 +38,16 @@
               class="snap-center relative flex items-center min-w-full dark:bg-black bg-white"
             >
               <div class="lg:w-3/5 w-full lg:mx-10 mx-5 z-20">
-                <h1 class="text-eva text-orange-500 lg:text-3vw text-4vh">
+                <h1 class="text-eva text-orange-500 lg:text-6xl text-4xl">
                   {{ site.h1 }}
                 </h1>
                 <p
-                  class="mb-5 text-raleway dark:text-neutral-400 text-neutral-600 lg:text-1vw text-1vh"
+                  class="mb-5 text-raleway dark:text-neutral-400 text-neutral-600 text-md"
                 >
                   {{ site.id }} / {{ site.year }}
                 </p>
                 <p
-                  class="text-noto lg:text-left text-justify lg:text-1vw text-5/4vh"
+                  class="text-noto lg:text-left text-justify lg:text-lg text-md"
                 >
                   {{ site.p }}
                 </p>
@@ -58,14 +58,14 @@
                     class="my-2 mr-4"
                   >
                     <p
-                      class="w-max lg:px-10 px-5 py-2 text-raleway lg:text-3/2vw text-2vh hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-300 duration-200 rounded-full"
+                      class="w-max lg:px-10 px-5 py-2 text-raleway lg:text-3xl text-xl hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-300 duration-200 rounded-full"
                     >
                       GitHub
                     </p>
                   </a>
                   <a target="_blank" :href="`${site.prevLink}`" class="my-2">
                     <p
-                      class="w-max lg:px-10 px-5 py-2 text-raleway lg:text-3/2vw text-2vh hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-300 duration-200 rounded-full"
+                      class="w-max lg:px-10 px-5 py-2 text-raleway lg:text-3xl text-xl hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-300 duration-200 rounded-full"
                     >
                       Предпрсмотр
                     </p>
@@ -82,7 +82,7 @@
           <div id="slider-buttons" class="flex justify-around lg:my-10 my-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-12 mx-5 cursor-pointer"
+              class="w-12 mx-5 cursor-pointer hover:stroke-orange-500 duration-200"
               id="chevron-left"
               fill="none"
               viewBox="0 0 24 24"
@@ -97,7 +97,7 @@
             </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-12 mx-5 cursor-pointer"
+              class="w-12 mx-5 cursor-pointer hover:stroke-orange-500 duration-200"
               id="chevron-right"
               fill="none"
               viewBox="0 0 24 24"

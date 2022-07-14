@@ -1,18 +1,18 @@
 <template>
   <section id="section-one" class="flex lg:flex-row flex-col">
     <div
-      class="relative grid place-content-center h-screen lg:w-3/4 w-full px-10 lg:bg-gradient-to-r bg-gradient-to-b from-white to-neutral-200 dark:from-black dark:to-neutral-900 lg:rounded-r-75px rounded-b-75px overflow-hidden z-10"
+      class="relative flex flex-col justify-center items-center h-screen lg:w-3/4 w-full px-10 lg:bg-gradient-to-r bg-gradient-to-b from-white to-neutral-200 dark:from-black dark:to-neutral-900 lg:rounded-r-75px rounded-b-75px overflow-hidden z-10"
     >
       <h1
         id="text-show-1"
-        class="relative text-eva lg:text-6vw text-5vh lg:text-left text-center z-20"
+        class="relative text-eva xl:text-9xl lg:text-8xl md:text-6xl text-4xl lg:text-left text-center z-20"
         style="filter: opacity(0); top: -40px"
       >
         Здравствуйте, меня зовут <span class="text-orange-500">Михаил</span>.
       </h1>
       <p
         id="text-show-2"
-        class="relative text-noto lg:text-2vw text-2vh lg:text-left text-center z-20"
+        class="relative w-full mt-2 text-noto lg:text-3xl text-xl lg:text-left text-center z-20"
         style="filter: opacity(0)"
       >
         И я - FrontEnd разработчик. Будущий.
@@ -68,7 +68,7 @@
       </svg>
     </div>
     <nav
-      class="flex lg:flex-nowrap flex-wrap lg:flex-col flex-row justify-center items-center lg:w-1/4 w-full lg:my-10 my-5 lg:space-y-5 text-center text-raleway lg:text-2vw text-3vh"
+      class="flex lg:flex-nowrap flex-wrap lg:flex-col flex-row justify-center items-center lg:w-1/4 w-full lg:my-10 my-5 lg:space-y-5 text-center text-raleway lg:text-4xl text-2xl"
     >
       <a
         id="nav-anim-1"
@@ -96,7 +96,7 @@
         class="px-5 py-2 hover:text-orange-500 duration-200"
         style="filter: opacity(0)"
         href="#section-five"
-        >Ссылки</a
+        >Контакты</a
       >
     </nav>
   </section>

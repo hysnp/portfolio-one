@@ -5,6 +5,7 @@
     <SectionTwoVue />
     <SectionThreeVue />
     <SectionFourVue />
+    <SectionFiveVue />
   </main>
 </template>
 
@@ -14,6 +15,7 @@ import SectionOneVue from "./sections/SectionOne.vue";
 import SectionTwoVue from "./sections/SectionTwo.vue";
 import SectionThreeVue from "./sections/SectionThree.vue";
 import SectionFourVue from "./sections/SectionFour.vue";
+import SectionFiveVue from "./sections/SectionFive.vue";
 
 import { onMounted } from "vue";
 // import { animate } from "motion";
@@ -107,14 +109,16 @@ onMounted(() => {
 
 #resume-anim,
 #portfolio-anim,
-#about-site-anim {
+#about-site-anim,
+#footer-anim {
   animation: 60s linear text-left-glide infinite;
 }
 
 @media (min-width: 1024px) {
   #resume-anim,
   #portfolio-anim,
-  #about-site-anim {
+  #about-site-anim,
+  #footer-anim {
     animation: 240s linear text-left-glide infinite;
   }
 }

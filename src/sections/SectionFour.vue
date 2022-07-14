@@ -1,8 +1,8 @@
 <template>
-  <section id="section-four" class="overflow-hidden">
+  <section id="section-four" class="min-h-lg overflow-hidden">
     <p
       id="about-site-anim"
-      class="w-max lg:my-5 my-0 mb-5 lg:text-2vw text-3vh text-raleway dark:text-neutral-900 text-neutral-200 uppercase"
+      class="w-max my-5 text-4xl text-raleway dark:text-neutral-900 text-neutral-200 uppercase"
     >
       / about site / about site / about site / about site / about site / about
       site / about site / about site / about site / about site / about site /
@@ -12,16 +12,16 @@
       <div
         class="lg:w-2/3 w-full p-10 lg:bg-gradient-to-l bg-gradient-to-b dark:from-neutral-900 dark:to-black from-neutral-200 to-white overflow-hidden lg:rounded-r-75px rounded-t-75px"
       >
-        <h2 class="text-eva text-orange-500 lg:text-3vw text-4vh">О сайте.</h2>
+        <h2 class="text-eva text-orange-500 lg:text-6xl text-4xl">О сайте.</h2>
         <p
-          class="mb-5 text-raleway dark:text-neutral-400 text-neutral-600 lg:text-1vw text-1vh"
+          class="mb-5 text-raleway dark:text-neutral-400 text-neutral-600 text-md"
         >
           Инфомация о нём и история разработки.
         </p>
         <p
-          class="mb-7 text-noto lg:text-left text-justify lg:text-5/4vw text-2vh"
+          class="mb-7 text-noto lg:text-left text-justify lg:text-lg text-md"
         >
-          Разработка данного сайта заняла у меня чуть меньше месяца со свободным
+          Разработка данного сайта заняла у меня около 20 дней со свободным
           графиком. За время создания этого проекта я столкнулся с различными
           трудностями, но все они уже позади. Одна из проблем - отсутствие
           анимации на переключении тем. Причиной этому не моя лень добавить
@@ -40,15 +40,15 @@
           я как всегда набрался некоторого опыта, чему очень рад. Надеюсь, вам
           сайт понравился тоже.
         </p>
-        <a target="_blank" href="https://github.com/str1ve21/portfolio-one">
+        <a class="flex w-max" target="_blank" href="https://github.com/str1ve21/portfolio-one">
           <p
-            class="w-max lg:px-10 px-5 py-2 text-raleway lg:text-3/2vw text-2vh hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-300 duration-200 rounded-full"
+            class="w-max lg:px-10 px-5 py-2 text-raleway lg:text-3xl text-xl hover:dark:bg-orange-500 hover:bg-orange-500 dark:bg-neutral-800 bg-neutral-300 duration-200 rounded-full"
           >
             Код сайта
           </p>
         </a>
       </div>
-      <div class="relative flex justify-center items-center lg:w-1/3 w-full">
+      <div class="relative flex justify-center items-center w-1/3 mx-auto mb-10">
         <div class="holo-gradient w-1/2 rounded-full">
           <img
             id="about-site-logo"

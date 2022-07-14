@@ -18,12 +18,24 @@
         height: 5vh;
     }
 
+    .w-5vw {
+        width: 5vw;
+    }
+
     .h-90vh {
         height: 90vh;
     }
 
     .w-5vh {
         width: 5vh;
+    }
+
+    .min-h-xl {
+        min-height: 576px;
+    }
+
+    .min-w-10 {
+        min-width: 40px;
     }
 
     .icon-size {
@@ -78,6 +90,10 @@
         padding-bottom: 1vw;
     }
 
+    .border-r-1 {
+        border-right-width: 1px;
+    }
+
     .space-x-1vw > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
         margin-right: calc(1vw * var(--tw-space-x-reverse));
@@ -115,84 +131,14 @@
         writing-mode: vertical-rl;
     }
 
-    .text-1vh {
-        font-size: 1vh;
+    .text-10xl {
+        font-size: 10rem;
+        line-height: 1;
     }
 
-    .text-3\/2vh {
-        font-size: 1.5vh;
-    }
-
-    .text-5\/4vh {
-        font-size: 1.25vh;
-    }
-
-    .text-2vh {
-        font-size: 2vh;
-    }
-
-    .text-3vh {
-        font-size: 3vh;
-    }
-
-    .text-4vh {
-        font-size: 4vh;
-    }
-
-    .text-5vh {
-        font-size: 5vh;
-    }
-
-    .text-6vh {
-        font-size: 6vh;
-    }
-
-    .text-7vh {
-        font-size: 7vh;
-    }
-
-    .text-8vh {
-        font-size: 8vh;
-    }
-
-    .text-1vw {
-        font-size: 1vw;
-    }
-
-    .text-5\/4vw {
-        font-size: 1.25vw;
-    }
-
-    .text-3\/2vw {
-        font-size: 1.5vw;
-    }
-
-    .text-2vw {
-        font-size: 2vw;
-    }
-
-    .text-3vw {
-        font-size: 3vw;
-    }
-
-    .text-4vw {
-        font-size: 4vw;
-    }
-
-    .text-5vw {
-        font-size: 5vw;
-    }
-
-    .text-6vw {
-        font-size: 6vw;
-    }
-
-    .text-7vw {
-        font-size: 7vw;
-    }
-
-    .text-8vw {
-        font-size: 8vw;
+    .text-11xl {
+        font-size: 12rem;
+        line-height: 1;
     }
 
     .rounded-75px {
