@@ -11,12 +11,12 @@
     <div class="flex lg:flex-row flex-col-reverse h-full">
       <h2
         id="portfolio-years"
-        class="h-max lg:mt-0 mt-5 text-eva text-center lg:text-10xl text-5xl dark:text-neutral-800 text-neutral-300 lg:vertical-rl z-10"
+        class="h-max w-max lg:mt-0 mt-5 text-eva text-center lg:text-10xl text-5xl dark:text-neutral-800 text-neutral-300 lg:vertical-rl z-10"
       >
-        2019 - 2022
+        2022 - 2019
       </h2>
       <div
-        class="portfolio bg-gradient-to-t dark:from-neutral-900 dark:to-black from-neutral-200 to-white rounded-b-75px z-20"
+        class="portfolio w-full bg-gradient-to-t dark:from-neutral-900 dark:to-black from-neutral-200 to-white rounded-b-75px z-20"
       >
         <h2 class="lg:ml-10 ml-5 text-eva text-orange-500 lg:text-6xl text-4xl">
           Портфолио.
@@ -26,16 +26,16 @@
         >
           Самые интересные сайты из истории моего обучения.
         </p>
-        <div class="flex flex-col min-h-xl h-90vh overflow-hidden">
+        <div class="flex flex-col min-h-xl h-90vh w-full overflow-hidden">
           <div
             id="portfolio-slider"
-            class="snap-mandatory snap-x flex h-full space-x-1 lg:mx-10 mx-5 rounded-75px overflow-hidden"
+            class="relative snap-mandatory snap-x flex h-full space-x-1 lg:mx-10 mx-5 rounded-75px overflow-hidden"
           >
             <div
               v-for="site in portfolio"
               :key="site.id"
               :id="`site-${site.id}`"
-              class="snap-center relative flex items-center min-w-full dark:bg-black bg-white"
+              class="snap-center relative h-full w-0 min-w-full flex items-center dark:bg-black bg-white overflow-hidden"
             >
               <div class="lg:w-3/5 w-full lg:mx-10 mx-5 z-20">
                 <h1 class="text-eva text-orange-500 lg:text-6xl text-4xl">
@@ -122,19 +122,41 @@ import { onMounted } from "vue";
 
 const portfolio = [
   {
-    id: 1,
-    h1: "Мой первый сайт.",
-    p: `Все мы с чего-то начинали. Я, естественно, не исключение. В основном,
-        свой путь в FrontEnd-е я начинал с сайта HTMLBook и MDN. Изредка смотрел
-        различные видео, для более подробного понимания темы, разве что избегал
-        "самые аху### способы". Каждую тему я закреплял на практике, путём
-        создания различных элементов сайта, но тогда я не особо переживал по
-        поводу исторической ценности своих первых шагов, поэтому почти всё я
-        делал на одном сайте. До наших дней сохранилась только финальная версия
-        сайта и найденный археологами "Безымянный.png" файл (фон). Думаю, код вам не
-        особо интересен, поэтому тут его нет.`,
-    year: 2019,
+    id: 5,
+    h1: "Изучение Vue.",
+    p: `Данный сайт я использовал как место для обучения, и в целом песочницу. Там я использовал
+        Options API, props а не state мэнеджер, theme switcher. Последний в свою очередь я стал
+        использовать почти на всех своих сайтах, в том числе и на этом, но его доработанную версию.
+        Если вам нужен код этого сайта, я был бы готов показать его, а в остальном, не вижу смысла загружать
+        его на GitHub. Это последний сайт за 22 год, а следующие за 20. Дело в том, что тогда я в основном
+        делал проекты с одноклассниками, или в них не было чего-то интересного, достойного портфолио.`,
+    year: 2022,
     showLinks: false,
+  },
+  {
+    id: 4,
+    h1: "Кофейня.",
+    p: `Этот landing я разрабатывал для Envato market. На разработку ушло много времени,
+        около 5 месяцев. Основная причина этому - неопределённость с дизайном и улучшение
+        кода. Данная страница так же понравилась моим знакомым, но, к сожалению, модерация
+        не оценила его. Наверное, это мой лучший проект на jQuery. Было грустно, что он
+        не прошёл, но я решил на этом не останавливаться.`,
+    year: 2020,
+    showLinks: true,
+    gitLink: "https://github.com/str1ve21/landing-coffee-shop",
+    prevLink: "https://str1ve21.github.io/landing-coffee-shop/",
+  },
+  {
+    id: 3,
+    h1: "Самолёты ВОВ.",
+    p: `Тут я использовал библиотеку TiltJS вместе с jQuery, да и код уже не такой страшный.
+        Как итог, данную работу так и не смогли оценить, причина тому - заочное обучение,
+        а защита работ у нас должна была быть очно. Конечно данный факт меня не сильно расстроил,
+        ведь благодаря этой работе я смог набраться большим количеством опыта.`,
+    year: 2020,
+    showLinks: true,
+    gitLink: "https://github.com/str1ve21/ww2-planes",
+    prevLink: "https://str1ve21.github.io/ww2-planes/",
   },
   {
     id: 2,
@@ -152,30 +174,19 @@ const portfolio = [
     prevLink: "https://str1ve21.github.io/places-of-barnaul/",
   },
   {
-    id: 3,
-    h1: "Самолёты ВОВ.",
-    p: `Данная работа выглядит уже в разы лучше предыдущих. Тут я использовал библиотеку
-        TiltJS вместе с jQuery, да и код уже не такой страшный. Как итог, данную
-        работу так и не смогли оценить, причина тому - заочное обучение, а защита работ
-        у нас должна была быть очно. Конечно данный факт меня не сильно расстроил,
-        ведь благодаря этой работе я смог набраться большим количеством опыта.`,
-    year: 2020,
-    showLinks: true,
-    gitLink: "https://github.com/str1ve21/ww2-planes",
-    prevLink: "https://str1ve21.github.io/ww2-planes/",
-  },
-  {
-    id: 4,
-    h1: "Кофейня.",
-    p: `Этот landing я разрабатывал для Envato market. На разработку ушло много времени,
-        около 5 месяцев. Основная причина этому - неопределённость с дизайном и улучшение
-        кода. Данная страница так же понравилась моим знакомым, но, к сожалению, модерация
-        не оценила его. Наверное, это мой лучший проект на jQuery. Было грустно, что он
-        не прошёл, но я решил на этом не останавливаться.`,
-    year: 2020,
-    showLinks: true,
-    gitLink: "https://github.com/str1ve21/landing-coffee-shop",
-    prevLink: "https://str1ve21.github.io/landing-coffee-shop/",
+    id: 1,
+    h1: "Мой первый сайт.",
+    p: `Все мы с чего-то начинали. Я, естественно, не исключение. В основном,
+        свой путь в FrontEnd-е я начинал с сайта HTMLBook и MDN. Изредка смотрел
+        различные видео, для более подробного понимания темы, разве что избегал
+        "самые аху### способы". Каждую тему я закреплял на практике, путём
+        создания различных элементов сайта, но тогда я не особо переживал по
+        поводу исторической ценности своих первых шагов, поэтому почти всё я
+        делал на одном сайте. До наших дней сохранилась только финальная версия
+        сайта и найденный археологами "Безымянный.png" файл (фон). Думаю, код вам не
+        особо интересен, поэтому тут его нет.`,
+    year: 2019,
+    showLinks: false,
   },
 ];
 
