@@ -76,7 +76,7 @@
               </div>
               <img
                 class="absolute right-0 h-full dark:brightness-50 brightness-100 object-cover object-top z-10"
-                :src="`./src/assets/page-${site.id}.webp`"
+                :src="`../../public/page-${site.id}.webp`"
                 :alt="`Скриншот моего ${site.id} сайта.`"
               />
             </div>

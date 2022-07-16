@@ -23,7 +23,7 @@
           class="m-2 min-w-10 w-5vw"
         >
           <img
-            :src="`./src/assets/${link.name}.svg`"
+            :src="`../../public/${link.name}.svg`"
             :alt="`Логотип ${link.name}`"
           />
         </a>
@@ -34,7 +34,7 @@
       >
         <img
           class="h-40 lg:mr-10 lg:mb-0 mb-5 object-contain"
-          src="../assets/me.webp"
+          src="../../public/me.webp"
           alt=""
         />
         <div id="about-me-text">

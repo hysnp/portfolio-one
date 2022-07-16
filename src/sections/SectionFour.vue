@@ -60,7 +60,7 @@
           <img
             id="about-site-logo"
             class="mix-blend-multiply object-contain"
-            src="../assets/holo-logo.svg"
+            src="../../public/holo-logo.svg"
             alt=""
           />
         </div>
