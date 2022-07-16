@@ -11,7 +11,7 @@
     <div class="flex lg:flex-row flex-col-reverse h-full">
       <h2
         id="portfolio-years"
-        class="h-max w-max lg:mt-0 mt-5 text-eva text-center lg:text-10xl text-5xl dark:text-neutral-800 text-neutral-300 lg:vertical-rl z-10"
+        class="h-max lg:mt-0 mt-5 text-eva text-center lg:text-10xl text-5xl dark:text-neutral-800 text-neutral-300 lg:vertical-rl z-10"
       >
         2022 - 2019
       </h2>
@@ -26,7 +26,7 @@
         >
           Самые интересные сайты из истории моего обучения.
         </p>
-        <div class="flex flex-col min-h-xl h-90vh w-full overflow-hidden">
+        <div class="flex flex-col min-h-3xl h-90vh w-full overflow-hidden">
           <div
             id="portfolio-slider"
             class="relative snap-mandatory snap-x flex h-full space-x-1 lg:mx-10 mx-5 rounded-75px overflow-hidden"
@@ -37,7 +37,9 @@
               :id="`site-${site.id}`"
               class="snap-center relative h-full w-0 min-w-full flex items-center dark:bg-black bg-white overflow-hidden"
             >
-              <div class="lg:w-3/5 w-full lg:mx-10 mx-5 z-20">
+              <div
+                class="lg:w-3/5 w-full lg:mx-10 mx-5 p-4 dark:bg-black/30 bg-white/30 backdrop-blur-sm rounded-3xl z-20"
+              >
                 <h1 class="text-eva text-orange-500 lg:text-6xl text-4xl">
                   {{ site.h1 }}
                 </h1>
@@ -47,7 +49,7 @@
                   {{ site.id }} / {{ site.year }}
                 </p>
                 <p
-                  class="text-noto lg:text-left text-justify lg:text-lg text-md"
+                  class="text-noto lg:text-left text-justify lg:text-lg text-sm"
                 >
                   {{ site.p }}
                 </p>
@@ -122,14 +124,49 @@ import { onMounted } from "vue";
 
 const portfolio = [
   {
+    id: 8,
+    h1: "Портфолио.",
+    p: `Как бы странно не выглядело, но почему бы не начать с самого портфолио? Сайт получился весьма хорошим и
+        многофункциональным. И к тому же, это самый свежий сайт из всех. Подробнее о разработке данного портфолио
+        вы можете прочитать ниже, а если хотите посмотреть мои проекты - листайте вправо.`,
+    year: 2022,
+    showLinks: true,
+    gitLink: "https://github.com/str1ve21/portfolio-one",
+    prevLink: "#",
+  },
+  {
+    id: 7,
+    h1: "Курсовая работа.",
+    p: `Данный проект был создан для выполнения курсовой работы по информатике. Чем интересен данный проект? - спросите вы,
+        а я отвечу, что на нём я реализовал горизонтальный скролл страницы, работу с sessionStorage для сохранения данных
+        о предпочтении скролла, и всё это без каких-либо фреймворков и библиотек для JS. Возможно он не такой особенный,
+        как остальные, но он имеет место быть. А ещё он мне нравится. Интересный факт: иконки для портфолио и курсовой одинаковы.`,
+    year: 2022,
+    showLinks: true,
+    gitLink: "https://github.com/str1ve21/it-kursovaya",
+    prevLink: "https://str1ve21.github.io/it-kursovaya/",
+  },
+  {
+    id: 6,
+    h1: "ToDo список.",
+    p: `Я считаю данный сайт лучшим в плане логики и работы с массивами. Его я сделал суммарно за 6 дней, но я
+        не планирую его забрасывать, в будущем будет более интересный интерфейс и больше функционала. В общем,
+        по моему мнению он хорош, но и не идеален.`,
+    year: 2022,
+    showLinks: true,
+    gitLink: "https://github.com/str1ve21/vite-todo",
+    prevLink: "https://str1ve21.github.io/vite-todo/",
+  },
+  {
     id: 5,
     h1: "Изучение Vue.",
     p: `Данный сайт я использовал как место для обучения, и в целом песочницу. Там я использовал
         Options API, props а не state мэнеджер, theme switcher. Последний в свою очередь я стал
         использовать почти на всех своих сайтах, в том числе и на этом, но его доработанную версию.
         Если вам нужен код этого сайта, я был бы готов показать его, а в остальном, не вижу смысла загружать
-        его на GitHub. Это последний сайт за 22 год, а следующие за 20. Дело в том, что тогда я в основном
-        делал проекты с одноклассниками, или в них не было чего-то интересного, достойного портфолио.`,
+        его на GitHub. Это последний сайт за 22 год, а следующие за 20. Дело в том, что в 21 году я был
+        заняд подготовкой к ЕГЭ. Были личные проекты, но они не такие интересные. Другую часть года отняла
+        работа курьером и ВУЗ.`,
     year: 2022,
     showLinks: false,
   },
@@ -186,6 +223,16 @@ const portfolio = [
         сайта и найденный археологами "Безымянный.png" файл (фон). Думаю, код вам не
         особо интересен, поэтому тут его нет.`,
     year: 2019,
+    showLinks: false,
+  },
+  {
+    id: 0,
+    h1: "Будущее.",
+    p: `На этом портфолио не заканчивается, ведь дальше будут ещё более интересные проекты.
+        У меня много идей для реализации, и много чего нужно изучить, но и в то же время,
+        если вы - работодатель, то возможно именно благодаря вам моё портфолио наполнится
+        новыми красками.`,
+    year: "20xx",
     showLinks: false,
   },
 ];

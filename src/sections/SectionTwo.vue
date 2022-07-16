@@ -29,7 +29,7 @@
         >
           Краткая версия резюме обо мне.
         </p>
-        <p class="mb-7 text-noto lg:text-left text-justify lg:text-lg text-md">
+        <p class="mb-7 text-noto lg:text-left text-justify lg:text-lg text-sm">
           Здравствуйте, меня зовут Оплачко Михаил Николаевич. На данный момент я
           ищу работу FrontEnd разработчиком. Если кратко, то созданием сайтов я
           занимаюсь уже третий год. В списке на этой же секции вы можете

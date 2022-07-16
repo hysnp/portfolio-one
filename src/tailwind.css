@@ -30,8 +30,8 @@
         width: 5vh;
     }
 
-    .min-h-xl {
-        min-height: 576px;
+    .min-h-3xl {
+        min-height: 768px;
     }
 
     .min-w-10 {

@@ -45,7 +45,7 @@
               >{{ randomHello }}</span
             >, я Михаил Оплачко.
           </h2>
-          <p class="text-noto lg:text-left text-justify lg:text-lg text-md">
+          <p class="text-noto lg:text-left text-justify lg:text-lg text-sm">
             Рад, что вас заинтересовало моё портфолио. Если у вас остались
             некоторые вопросы, или я интересен вам, можете написать мне в
             социальных сетях или по почте из списка этой секции. Я с радостью
